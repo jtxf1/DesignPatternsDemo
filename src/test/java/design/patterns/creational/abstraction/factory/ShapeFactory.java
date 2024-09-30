@@ -1,5 +1,10 @@
 package design.patterns.creational.abstraction.factory;
 
+import design.patterns.creational.abstraction.factory.service.Color;
+import design.patterns.creational.abstraction.factory.service.Shape;
+
+import java.util.Objects;
+
 public class ShapeFactory extends AbstractFactory {
 
     @Override
@@ -7,14 +12,7 @@ public class ShapeFactory extends AbstractFactory {
         if(shapeType == null){
             return null;
         }
-        if(shapeType.equalsIgnoreCase("CIRCLE")){
-            return new Circle();
-        } else if(shapeType.equalsIgnoreCase("RECTANGLE")){
-            return new Rectangle();
-        } else if(shapeType.equalsIgnoreCase("SQUARE")){
-            return new Square();
-        }
-        return null;
+        return Objects.requireNonNull(FactoryEnum.getShape(shapeType));
     }
 
     @Override

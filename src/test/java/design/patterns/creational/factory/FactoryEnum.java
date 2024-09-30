@@ -4,8 +4,6 @@ import design.patterns.creational.factory.iml.Circle;
 import design.patterns.creational.factory.iml.Rectangle;
 import design.patterns.creational.factory.iml.Square;
 
-import java.util.Objects;
-
 public enum FactoryEnum {
     CIRCLE(new Circle(),"CIRCLE"),
     RECTANGLE(new Rectangle(),"RECTANGLE"),
@@ -18,7 +16,7 @@ public enum FactoryEnum {
     // 普通方法
     public static Shape getShape(String name) {
         for (FactoryEnum c : FactoryEnum.values()) {
-            if (Objects.equals(c.name, name)) {
+            if (c.name == name) {
                 return c.shape;
             }
         }

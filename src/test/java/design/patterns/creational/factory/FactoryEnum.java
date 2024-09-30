@@ -1,6 +1,12 @@
 package design.patterns.creational.factory;
 
-public enum Factory {
+import design.patterns.creational.factory.iml.Circle;
+import design.patterns.creational.factory.iml.Rectangle;
+import design.patterns.creational.factory.iml.Square;
+
+import java.util.Objects;
+
+public enum FactoryEnum {
     CIRCLE(new Circle(),"CIRCLE"),
     RECTANGLE(new Rectangle(),"RECTANGLE"),
     SQUARE(new Square(),"SQUARE");
@@ -11,15 +17,15 @@ public enum Factory {
 
     // 普通方法
     public static Shape getShape(String name) {
-        for (Factory c : Factory.values()) {
-            if (c.name == name) {
+        for (FactoryEnum c : FactoryEnum.values()) {
+            if (Objects.equals(c.name, name)) {
                 return c.shape;
             }
         }
         return null;
     }
     // 构造方法
-    private Factory(Shape shape, String name) {
+    private FactoryEnum(Shape shape, String name) {
         this.shape = shape;
         this.name = name;
     }

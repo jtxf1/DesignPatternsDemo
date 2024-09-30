@@ -1,4 +1,6 @@
-package design.patterns.creational.factory;
+package design.patterns.creational.factory.iml;
+
+import design.patterns.creational.factory.Shape;
 
 public class Circle implements Shape {
 

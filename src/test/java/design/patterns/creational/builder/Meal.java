@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Meal {
-    private List<ItemInterface> items = new ArrayList<ItemInterface>();
+    private final List<ItemInterface> items = new ArrayList<>();
 
     public void addItem(ItemInterface item){
         items.add(item);

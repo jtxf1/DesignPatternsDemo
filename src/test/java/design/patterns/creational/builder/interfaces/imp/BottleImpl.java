@@ -1,8 +1,8 @@
 package design.patterns.creational.builder.interfaces.imp;
 
-import design.patterns.creational.builder.interfaces.Packing;
+import design.patterns.creational.builder.interfaces.PackingInterface;
 
-public class Bottle implements Packing {
+public class BottleImpl implements PackingInterface {
 
     @Override
     public String pack() {

@@ -1,6 +1,6 @@
 package design.patterns.creational.builder.interfaces.imp;
 
-public class VegBurger extends Burger {
+public class VegBurger extends BurgerImpl {
 
     @Override
     public float price() {

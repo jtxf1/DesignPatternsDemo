@@ -1,6 +1,6 @@
 package design.patterns.creational.builder.interfaces.imp;
 
-public class Coke extends ColdDrink {
+public class Coke extends ColdDrinkImpl {
 
     @Override
     public float price() {
